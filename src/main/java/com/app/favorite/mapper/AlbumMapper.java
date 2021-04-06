@@ -6,14 +6,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 @Component
 public class AlbumMapper {
 
     private static final String ARTIST = "artist";
-
-    private Predicate<AlbumDto> isArtistType = a -> ARTIST.equals(a.getWrapperType());
 
     public List<Album> mapAlbums(List<AlbumDto> albumDtos) {
         List<Album> albums = new ArrayList<>();
